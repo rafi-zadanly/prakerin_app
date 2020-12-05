@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'custom'], function () {
     Route::get('login', [UserController::class, 'index']);
+    Route::post('login', [UserController::class, 'login']);
 });
 
 Route::group(['prefix' => 'admin'], function () {
