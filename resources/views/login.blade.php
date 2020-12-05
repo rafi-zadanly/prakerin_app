@@ -13,6 +13,32 @@
 
 <body>
 
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-4 offset-4">
+                <div class="card">
+                    <div class="card-header text-center h4 bg-primary text-light">
+                        Prakerin Manager
+                    </div>
+                    <div class="card-body">
+                        <form action="/custom/login" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Email :</label>
+                                <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password :</label>
+                                <input type="password" class="form-control" name="password" id="" placeholder="">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
