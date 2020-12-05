@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => 'custom'], function () {
+    Route::get('login', [UserController::class, 'index']);
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
