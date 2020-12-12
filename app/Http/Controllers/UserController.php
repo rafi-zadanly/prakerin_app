@@ -17,4 +17,9 @@ class UserController extends Controller
         $credentials = $request->only('email', 'password');
         dd(Hash::make($credentials['password']));
     }
+
+    public function report_page()
+    {
+        return view('templates/header');
+    }
 }
