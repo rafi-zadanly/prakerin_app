@@ -32,4 +32,9 @@ class UserController extends Controller
         $request->session()->flush();
         return redirect('custom/login')->with('message', 'Logout successful.')->with('type', 'success');
     }
+
+    public function report_page()
+    {
+        return view('templates/header');
+    }
 }
