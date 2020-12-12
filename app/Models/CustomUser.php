@@ -9,5 +9,7 @@ class CustomUser extends Model
 {
     use HasFactory;
 
+    protected $table = 'students';
+
     protected $hidden = ['password'];
 }
