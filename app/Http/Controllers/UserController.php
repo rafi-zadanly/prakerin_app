@@ -33,13 +33,21 @@ class UserController extends Controller
         return redirect('custom/login')->with('message', 'Logout successful.')->with('type', 'success');
     }
 
-    public function dashboard()
+    public function base()
     {
         return view('templates/base');
     }
 
-    public function report()
+    public function dashboard()
     {
-        return view('templates/base');
+        $data['page'] = 'Pengajuan';
+
+        return view('templates/base', $data);
+    }
+
+
+    public function pengajuan()
+    {
+        return view('pengajuan');
     }
 }
