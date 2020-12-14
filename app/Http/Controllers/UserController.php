@@ -35,11 +35,11 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        return view('templates/base');
+        return view('templates.base');
     }
 
     public function report()
     {
-        return view('templates/base');
+        return view('templates.base');
     }
 }

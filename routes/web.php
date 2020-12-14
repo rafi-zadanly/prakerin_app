@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,8 +24,12 @@ Route::group(['prefix' => 'custom'], function () {
     Route::post('login', [UserController::class, 'login']);
     Route::get('logout', [UserController::class, 'logout']);
     Route::get('dashboard', [UserController::class, 'dashboard']);
-    Route::get('pengajuan', [UserController::class, 'pengajuan']);
     Route::get('report', [UserController::class, 'report']);
+
+    Route::group(['prefix' => 'pengajuan'], function () {
+        Route::get('/', [PengajuanController::class, 'index']);
+        Route::post('store', [PengajuanController::class, 'store']);
+    });
 });
 
 Route::group(['prefix' => 'admin'], function () {
