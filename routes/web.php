@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::group(['prefix' => 'custom'], function () {
+    Route::get('laporan-pdf', 'HomeController@generatePDF');
     Route::get('login', [UserController::class, 'index']);
     Route::post('login', [UserController::class, 'login']);
     Route::get('logout', [UserController::class, 'logout']);
