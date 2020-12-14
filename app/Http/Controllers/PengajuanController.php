@@ -8,7 +8,7 @@ class PengajuanController extends Controller
 {
     public function index()
     {
-        return view('templates.base');
+        return view('pengajuan_magang.index');
     }
 
     public function store(Request $request)

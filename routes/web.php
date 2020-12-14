@@ -24,17 +24,12 @@ Route::group(['prefix' => 'custom'], function () {
     Route::post('login', [UserController::class, 'login']);
     Route::get('logout', [UserController::class, 'logout']);
     Route::get('dashboard', [UserController::class, 'dashboard']);
-<<<<<<< HEAD
     Route::get('report', [UserController::class, 'report']);
 
     Route::group(['prefix' => 'pengajuan'], function () {
         Route::get('/', [PengajuanController::class, 'index']);
         Route::post('store', [PengajuanController::class, 'store']);
     });
-=======
-    Route::get('pengajuan', [UserController::class, 'pengajuan']);
-    Route::get('base', [UserController::class, 'base']);
->>>>>>> 0728666979bc27e9e166bb7d86b783f78de5b887
 });
 
 Route::group(['prefix' => 'admin'], function () {
