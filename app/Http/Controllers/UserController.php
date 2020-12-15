@@ -45,7 +45,6 @@ class UserController extends Controller
 
         return view('templates/base', $data);
     }
-<<<<<<< HEAD
 
     public function pengajuan()
     {
@@ -56,6 +55,4 @@ class UserController extends Controller
     {
         return view('status_siswa');
     }
-=======
->>>>>>> 9da17952744b602acf913a06effa5246a75f1f17
 }

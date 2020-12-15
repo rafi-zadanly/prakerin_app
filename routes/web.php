@@ -26,12 +26,11 @@ Route::group(['prefix' => 'custom'], function () {
     Route::get('login', [UserController::class, 'index']);
     Route::post('login', [UserController::class, 'login']);
     Route::get('logout', [UserController::class, 'logout']);
-<<<<<<< HEAD
+
     Route::get('dashboard', [UserController::class, 'dashboard']);
     Route::get('pengajuan', [UserController::class, 'pengajuan']);
     Route::get('status_siswa', [UserController::class, 'status_siswa']);
     Route::get('base', [UserController::class, 'base']);
-=======
 
     Route::group(['middleware' => ['custom.auth']], function () {
         Route::get('dashboard', [UserController::class, 'dashboard']);
@@ -43,7 +42,6 @@ Route::group(['prefix' => 'custom'], function () {
             Route::post('destroy', [PengajuanController::class, 'destroy']);
         });
     });
->>>>>>> 9da17952744b602acf913a06effa5246a75f1f17
 });
 
 Route::group(['prefix' => 'admin'], function () {
