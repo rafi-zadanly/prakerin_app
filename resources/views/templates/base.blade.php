@@ -56,20 +56,23 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item {{ (request()->is('custom/pengajuan')) ? 'active' : '' }}">
-                <a class="nav-link" href="/custom/pengajuan">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Pengajuan Magang</span>
-                </a>
-            </li>
+            <<<<<<< HEAD <li class="nav-item">
+                =======
+                <li class="nav-item {{ (request()->is('custom/pengajuan')) ? 'active' : '' }}">
+                    >>>>>>> 969ea52c300108002a1cf2dbc823744178631979
+                    <a class="nav-link" href="/custom/pengajuan">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Pengajuan Magang</span>
+                    </a>
+                </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
 
         </ul>
         <!-- End of Sidebar -->
