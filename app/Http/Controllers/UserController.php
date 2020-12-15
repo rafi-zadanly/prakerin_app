@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CustomUser;
+use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         return view('login');
     }
@@ -17,11 +16,13 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-        $checkAuth = CustomUser::where('email', $credentials['email'])->first();
-        // $checkAuth = DB::table('students')->where('email', $credentials['email'])->first();
+        $checkAuth = Student::where('email', $credentials['email'])->first();
 
         if ($checkAuth != NULL && Hash::check($credentials['password'], $checkAuth->password)) {
-            $request->session()->put('fullname', $checkAuth->fullname);
+            $request->session()->put('auth.id', $checkAuth->id);
+            $request->session()->put('auth.fullname', $checkAuth->fullname);
+            $request->session()->put('auth.isLogin', true);
+            return redirect('custom/dashboard');
         } else {
             return back()->withInput()->with('message', "The credentials doesn't match.")->with('type', 'warning');
         }
@@ -35,7 +36,7 @@ class UserController extends Controller
 
     public function base()
     {
-        return view('templates/base');
+        return view('templates.base');
     }
 
     public function dashboard()
@@ -44,6 +45,7 @@ class UserController extends Controller
 
         return view('templates/base', $data);
     }
+<<<<<<< HEAD
 
     public function pengajuan()
     {
@@ -54,4 +56,6 @@ class UserController extends Controller
     {
         return view('status_siswa');
     }
+=======
+>>>>>>> 9da17952744b602acf913a06effa5246a75f1f17
 }
