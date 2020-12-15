@@ -17,7 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('vendor/bootstrap/css/sb-admin-2.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('storage/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -202,7 +202,7 @@
         <!-- Custom scripts for all pages-->
         <script src="{{ asset('vendor/bootstrap/js/sb-admin-2.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/mdb.min.js') }}"></script>
-        <script src="{{ asset('storage/js/main.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
