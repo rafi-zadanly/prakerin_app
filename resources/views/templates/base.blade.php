@@ -56,10 +56,8 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <<<<<<< HEAD <li class="nav-item">
-                =======
+            <li class="nav-item">
                 <li class="nav-item {{ (request()->is('custom/pengajuan')) ? 'active' : '' }}">
-                    >>>>>>> 969ea52c300108002a1cf2dbc823744178631979
                     <a class="nav-link" href="/custom/pengajuan">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Pengajuan Magang</span>

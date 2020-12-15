@@ -11,9 +11,9 @@ class HomeController extends Controller
     public function generatePDF()
 
     {
-        $data = ['title' => 'Welcome to belajarphp.net'];
+        $data = ['title' => 'Welcome'];
 
         $pdf = PDF::loadView('myPDF', $data);
-        return $pdf->download('laporan-pdf.pdf');
+        return $pdf->stream();
     }
 }
