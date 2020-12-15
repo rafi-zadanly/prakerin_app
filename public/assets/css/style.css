@@ -9,13 +9,7 @@ section {
 }
 .step {
   position: relative;
-  min-height: 64px
-  /* circle-size */
-  ;
-  opacity: 0.5;
-}
-.step.active {
-  opacity: 1;
+  min-height: 64px;
 }
 .step > div:first-child {
   position: static;
@@ -25,11 +19,21 @@ section {
   margin-left: 32px;
   padding-left: 16px;
 }
-.circle {
-  background: #4285f4;
+.step.active .circle {
+  background: var(--primary);
   width: 32px;
   height: 32px;
   line-height: 32px;
+  border-radius: 16px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.step .circle {  
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid var(--primary);
   border-radius: 16px;
   position: relative;
   color: white;
@@ -39,13 +43,17 @@ section {
   position: absolute;
   border: 1px solid #cccccc;
   left: 16px;
-  bottom: 10px;
-  top: 42px;
+  bottom: 5px;
+  top: 37px;
 }
 .step:last-child .line {
   display: none;
 }
-.title {
+.step.active .title {
   line-height: 32px;
-  font-weight: bold;
+  font-weight: 700;
+}
+.step .title {
+  line-height: 32px;
+  font-weight: 300;
 }

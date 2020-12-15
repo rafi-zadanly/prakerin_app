@@ -15,7 +15,7 @@
         <div class="card shadow mb-4 p-3">
             <div class="step active">
                 <div>
-                    <div class="circle active"></div>
+                    <div class="circle"></div>
                     <div class="line"></div>
                 </div>
                 <div>
@@ -24,7 +24,7 @@
             </div>
             <div class="step active">
                 <div>
-                    <div class="circle active"></div>
+                    <div class="circle"></div>
                     <div class="line"></div>
                 </div>
                 <div>
