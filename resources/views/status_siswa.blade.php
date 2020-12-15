@@ -12,50 +12,32 @@
 
     <!-- Area Chart -->
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-        <div class="card shadow mb-4">
-            <!-- Card Header - Dropdown -->
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Step Progress</h6>
-            </div>
-            <!-- Card Body -->
-            <div class="card-body">
-                <div id="svg_wrap" class="mb-5"></div>
-
-                <div class="mb-5">
-                    <section>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita deserunt nihil iste quam, quis porro vel?
-                    </section>
-
-                    <section>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, similique adipisci?
-                    </section>
-
-                    <section>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatibus error praesentium?</p>
-                    </section>
-
-                    <section>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corrupti voluptatum quo nisi exercitationem libero!</p>
-                    </section>
-
-                    <section>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, enim?</p>
-                    </section>
-
-                    <section>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, enim?</p>
-                    </section>
-
-                    <section>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, enim?</p>
-                    </section>
+        <div class="card shadow mb-4 p-3">
+            <div class="step active">
+                <div>
+                    <div class="circle active"></div>
+                    <div class="line"></div>
                 </div>
-
-                <div class="row text-right">
-                    <div class="col-12">
-                        <div class="btn btn-outline-primary" id="prev">Previous</div>
-                        <div class="btn btn-primary" id="next">Next</div>
-                    </div>
+                <div>
+                    <div class="title">Pembekalan Magang</div>
+                </div>
+            </div>
+            <div class="step active">
+                <div>
+                    <div class="circle active"></div>
+                    <div class="line"></div>
+                </div>
+                <div>
+                    <div class="title">Pengajuan Magang</div>
+                </div>
+            </div>
+            <div class="step">
+                <div>
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                </div>
+                <div>
+                    <div class="title">Pengajuan Magang</div>
                 </div>
             </div>
         </div>

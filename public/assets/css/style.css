@@ -1,3 +1,51 @@
 section {
   transition:transform 0.2s ease-in-out;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.step {
+  position: relative;
+  min-height: 64px
+  /* circle-size */
+  ;
+  opacity: 0.5;
+}
+.step.active {
+  opacity: 1;
+}
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+.step > div:last-child {
+  margin-left: 32px;
+  padding-left: 16px;
+}
+.circle {
+  background: #4285f4;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.line {
+  position: absolute;
+  border: 1px solid #cccccc;
+  left: 16px;
+  bottom: 10px;
+  top: 42px;
+}
+.step:last-child .line {
+  display: none;
+}
+.title {
+  line-height: 32px;
+  font-weight: bold;
+}
