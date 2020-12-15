@@ -13,31 +13,61 @@
     <!-- Area Chart -->
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
         <div class="card shadow mb-4 p-3">
-            <div class="step active">
-                <div>
-                    <div class="circle"></div>
-                    <div class="line"></div>
+            <div class="container mt-4">
+                <div class="step active">
+                    <div>
+                        <div class="circle">
+                            <i class="fas fa-fw fa-check"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div>
+                        <div class="title">Persyaratan Magang</div>
+                    </div>
                 </div>
-                <div>
-                    <div class="title">Pembekalan Magang</div>
+                <div class="step active">
+                    <div>
+                        <div class="circle">
+                            <i class="fas fa-fw fa-check"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div>
+                        <div class="title">Pengajuan Magang</div>
+                    </div>
                 </div>
-            </div>
-            <div class="step active">
-                <div>
-                    <div class="circle"></div>
-                    <div class="line"></div>
+                <div class="step">
+                    <div>
+                        <div class="circle">
+                            <i class="fas fa-fw fa-check"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div>
+                        <div class="title">Perjanjian Magang</div>
+                    </div>
                 </div>
-                <div>
-                    <div class="title">Pengajuan Magang</div>
+                <div class="step">
+                    <div>
+                        <div class="circle">
+                            <i class="fas fa-fw fa-check"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div>
+                        <div class="title">Pelaksanaan Magang</div>
+                    </div>
                 </div>
-            </div>
-            <div class="step">
-                <div>
-                    <div class="circle"></div>
-                    <div class="line"></div>
-                </div>
-                <div>
-                    <div class="title">Pengajuan Magang</div>
+                <div class="step">
+                    <div>
+                        <div class="circle">
+                            <i class="fas fa-fw fa-check"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div>
+                        <div class="title">Laporan Magang</div>
+                    </div>
                 </div>
             </div>
         </div>

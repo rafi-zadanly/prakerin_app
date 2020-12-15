@@ -39,9 +39,19 @@ section {
   color: white;
   text-align: center;
 }
+.step.active .circle i{
+  color: var(--white);
+  font-size: 12px;
+  transform: translate(0%, -12%);
+}
+.step .circle i{
+  color: var(--primary);
+  font-size: 12px;
+  transform: translate(0%, -12%);
+}
 .line {
   position: absolute;
-  border: 1px solid #cccccc;
+  border-left: 1px solid var(--primary);
   left: 16px;
   bottom: 5px;
   top: 37px;
