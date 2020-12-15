@@ -11,49 +11,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
-    .card {
+    .form {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* max-width: 1000px; */
-        min-width: 400px;
+        min-width: 30vw;
+    }
+
+    @media (max-width: 768px) {
+        .form {
+            min-width: 90vw;
+        }
     }
 </style>
 
 <body>
 
-    <!-- <div class="container">
-        <div class="row my-5">
-            <div class="col-12 col-md-4 offset-0 offset-md-4">
-                @if (session('message'))
-                <div class="alert alert-{{ session('type') }} text-center shadow-sm">
-                    {{ session('message') }}
-                </div>
-                @endif -->
 
-    <div class="card shadow">
-        <div class="card-header text-center h4 bg-primary text-light">
-            Prakerin Manager
+    <div class="form">
+        @if (session('message'))
+        <div class="alert alert-{{ session('type') }} text-center shadow-sm">
+            {{ session('message') }}
         </div>
-        <div class="card-body">
-            <form action="/custom/login" method="post">
-                @csrf
-                <div class="form-group">
-                    <label for="">Email :</label>
-                    <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="" value="{{ old('email') }}" autofocus>
-                </div>
-                <div class="form-group">
-                    <label for="">Password :</label>
-                    <input type="password" class="form-control" name="password" id="" placeholder="">
-                </div>
-                <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
-            </form>
+        @endif
+
+        <div class="card shadow">
+            <div class="card-header text-center h4 bg-primary text-light">
+                Prakerin Manager
+            </div>
+            <div class="card-body">
+                <form action="/custom/login" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="">Email :</label>
+                        <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="" value="{{ old('email') }}" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password :</label>
+                        <input type="password" class="form-control" name="password" id="" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
+                </form>
+            </div>
         </div>
     </div>
-    <!-- </div>
-        </div>
-    </div> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
