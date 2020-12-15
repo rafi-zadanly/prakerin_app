@@ -94,7 +94,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ session()->get('auth.fullname') }}</span>
                                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -126,6 +126,19 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            @if(session('status'))
+                            <div class="alert alert-{{ session('type') }} alert-dismissible fade show text-center" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                                {{ session('status') }}
+                            </div>
+                            @endif
+                        </div>
+                    </div>
 
                     @yield('content')
 
@@ -166,7 +179,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="/custom/logout">Logout</a>
                     </div>
                 </div>
             </div>

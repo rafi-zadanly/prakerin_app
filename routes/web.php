@@ -20,15 +20,20 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'custom'], function () {
+
     Route::get('login', [UserController::class, 'index']);
     Route::post('login', [UserController::class, 'login']);
     Route::get('logout', [UserController::class, 'logout']);
-    Route::get('dashboard', [UserController::class, 'dashboard']);
-    Route::get('report', [UserController::class, 'report']);
 
-    Route::group(['prefix' => 'pengajuan'], function () {
-        Route::get('/', [PengajuanController::class, 'index']);
-        Route::post('store', [PengajuanController::class, 'store']);
+    Route::group(['middleware' => ['custom.auth']], function () {
+        Route::get('dashboard', [UserController::class, 'dashboard']);
+        Route::get('report', [UserController::class, 'report']);
+
+        Route::group(['prefix' => 'pengajuan'], function () {
+            Route::get('/', [PengajuanController::class, 'index']);
+            Route::post('store', [PengajuanController::class, 'store']);
+            Route::post('destroy', [PengajuanController::class, 'destroy']);
+        });
     });
 });
 
