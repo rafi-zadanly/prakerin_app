@@ -24,6 +24,7 @@ Route::group(['prefix' => 'custom'], function () {
     Route::get('logout', [UserController::class, 'logout']);
     Route::get('dashboard', [UserController::class, 'dashboard']);
     Route::get('pengajuan', [UserController::class, 'pengajuan']);
+    Route::get('status_siswa', [UserController::class, 'status_siswa']);
     Route::get('base', [UserController::class, 'base']);
 });
 

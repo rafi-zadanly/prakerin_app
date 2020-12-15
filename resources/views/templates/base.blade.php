@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('vendor/bootstrap/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('storage/css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -60,6 +61,12 @@
                 <a class="nav-link" href="/custom/pengajuan">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pengajuan Magang</span>
+                </a>
+            </li>
+            <li class="nav-item {{ (request()->is('custom/status_siswa')) ? 'active' : '' }}">
+                <a class="nav-link" href="/custom/status_siswa">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Status Siswa</span>
                 </a>
             </li>
 
@@ -182,6 +189,7 @@
         <!-- Custom scripts for all pages-->
         <script src="{{ asset('vendor/bootstrap/js/sb-admin-2.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/mdb.min.js') }}"></script>
+        <script src="{{ asset('storage/js/main.js') }}"></script>
 </body>
 
 </html>
