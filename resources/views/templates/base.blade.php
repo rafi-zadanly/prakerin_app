@@ -63,10 +63,11 @@
                     <span>Pengajuan Magang</span>
                 </a>
             </li>
-            <li class="nav-item {{ (request()->is('custom/status_siswa')) ? 'active' : '' }}">
-                <a class="nav-link" href="/custom/status_siswa">
+
+            <li class="nav-item {{ (request()->is('custom/jurnal')) ? 'active' : '' }}">
+                <a class="nav-link" href="/custom/jurnal">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Status Siswa</span>
+                    <span>Jurnal Magang</span>
                 </a>
             </li>
 
@@ -202,7 +203,6 @@
         <!-- Custom scripts for all pages-->
         <script src="{{ asset('vendor/bootstrap/js/sb-admin-2.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/mdb.min.js') }}"></script>
-        <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

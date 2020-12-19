@@ -39,20 +39,8 @@ class UserController extends Controller
         return view('templates.base');
     }
 
-    public function dashboard()
-    {
-        $data['page'] = 'Pengajuan';
-
-        return view('templates/base', $data);
-    }
-
     public function pengajuan()
     {
         return view('pengajuan');
-    }
-
-    public function status_siswa()
-    {
-        return view('status_siswa');
     }
 }

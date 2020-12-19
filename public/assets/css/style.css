@@ -9,7 +9,7 @@ section {
 }
 .step {
   position: relative;
-  min-height: 64px;
+  min-height: 80px;
 }
 .step > div:first-child {
   position: static;
