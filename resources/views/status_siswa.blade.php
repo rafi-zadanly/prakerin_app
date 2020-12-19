@@ -17,7 +17,7 @@
                 <div class="step active">
                     <div>
                         <div class="circle">
-                            <i class="fas fa-fw fa-check"></i>
+                            <i class="far fa-clipboard"></i>
                         </div>
                         <div class="line"></div>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="step active">
                     <div>
                         <div class="circle">
-                            <i class="fas fa-fw fa-check"></i>
+                            <i class="far fa-envelope"></i>
                         </div>
                         <div class="line"></div>
                     </div>

@@ -28,7 +28,6 @@
 
 <body>
 
-
     <div class="form">
         @if (session('message'))
         <div class="alert alert-{{ session('type') }} text-center shadow-sm">
